@@ -1,4 +1,5 @@
 @use "./variables.scss" as *;
+@use "../scss/partials/partial-header-main.scss";
 
 /* Reset CSS */
 * {
@@ -59,10 +60,12 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 30px;
     max-width: 1440px;
     @media (max-width: $tablet) {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     @media (max-width: $mobile) {
+        padding-left: 5px;
+        padding-right: 5px;
         max-width: none;
     }
 }

@@ -1,5 +1,6 @@
 <?php
-
+add_filter('show_admin_bar', '__return_false'); // hide admin bar
+// styles
 function theme_enqueue_styles() {
     wp_enqueue_style('main_css', get_template_directory_uri() . '/assets/css/style.css');
 }
@@ -23,8 +24,14 @@ function theme_enqueue_league_script() {
     );
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_league_script');
+// 
 
-
+// scripts
+function theme_enqueue_scripts () {
+    wp_enqueue_script('main_js', get_template_directory_uri() . '/assets/js/main.js', array(), false, true);
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
+// 
 
 if (class_exists('ACF')) {
 
@@ -43,4 +50,13 @@ if (class_exists('ACF')) {
 
         return $paths;
     });
+};
+
+function add_menus () {
+    register_nav_menus(
+        array(
+            "primary" => "Primary Menu"
+        )
+    );
 }
+add_action("init", "add_menus");

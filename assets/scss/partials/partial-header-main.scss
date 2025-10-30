@@ -1,0 +1,26 @@
+@use "../variables.scss" as *;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    .header_logo {
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center; 
+        display: block; 
+        width: 220px; 
+        height: 100px;
+    };
+    .menu-primary-container {
+        .menu {
+            display: flex;
+            gap: 30px;
+            line-height: 100px;
+            font-size: $button-fz;
+            @media (max-width: $tablet) {
+                gap: 20px;
+            }
+        }
+    }
+}
