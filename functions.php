@@ -5,6 +5,27 @@ function theme_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
+function theme_enqueue_montserrat() {
+    wp_enqueue_style(
+        'google-fonts-montserrat',
+        'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap',
+        false
+    );
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_montserrat');
+
+
+function theme_enqueue_league_script() {
+    wp_enqueue_style(
+        'google-fonts-league-script',
+        'https://fonts.googleapis.com/css2?family=League+Script&display=swap',
+        false
+    );
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_league_script');
+
+
+
 if (class_exists('ACF')) {
 
     // Save fields to json files
