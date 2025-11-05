@@ -7,6 +7,9 @@
         href=""
         style="background-image: url('<?php echo esc_url($main_logo); ?>');">
     </a>
+    <div class="menu_toggle_wrapper">
+        <button id="menu_toggle_btn" class="menu_toggle" aria-label="Toggle Menu"></button>
+    </div>
     <?php
         wp_nav_menu( array( 
                 'theme_location' => 'primary',

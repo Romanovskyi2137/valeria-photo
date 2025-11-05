@@ -2,8 +2,10 @@ header {
   display: flex;
   justify-content: space-between;
   padding-top: 15px;
+  position: relative;
 }
 header .header_logo {
+  z-index: 3;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -19,8 +21,56 @@ header .menu-primary-container .menu {
 }
 @media (max-width: 1025px) {
   header .menu-primary-container .menu {
-    gap: 20px;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(100vw);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(237, 231, 228, 0.6);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
   }
+}
+@media (max-width: 1025px) {
+  header .menu-primary-container {
+    position: absolute;
+  }
+}
+header .menu-primary-container .menu_active {
+  transform: translateX(0);
+}
+header .menu_toggle_wrapper {
+  position: relative;
+  display: none;
+}
+@media (max-width: 1025px) {
+  header .menu_toggle_wrapper {
+    display: block;
+    right: 60px;
+  }
+}
+header .menu_toggle_wrapper .menu_toggle {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  content: "";
+  background-image: url("../img/icons/burger-menu.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+header .menu_toggle_wrapper .menu_toggle_active {
+  background-image: url("../img/icons/close-x.svg");
 }
 
 /* Reset CSS */
@@ -31,7 +81,8 @@ header .menu-primary-container .menu {
 }
 
 html, body {
-  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
   font-size: 100%;
   font-size: 16px;
   scroll-behavior: smooth;
@@ -79,7 +130,6 @@ h1, h2, h3, h4, h5, h6 {
 [class*=__container] {
   padding-left: 30px;
   padding-right: 30px;
-  max-width: 1440px;
 }
 @media (max-width: 1025px) {
   [class*=__container] {
@@ -96,10 +146,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background-color: #EDE7E4;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
+}
+
+.body_no-scroll {
+  overflow-y: hidden;
 }
 
 .script-font {

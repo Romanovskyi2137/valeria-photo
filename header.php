@@ -6,4 +6,4 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <?php get_template_part('teplate-parts/partials/partial', 'header-main'); ?>
+    <?php get_template_part('template-parts/partials/partial', 'header-main'); ?>

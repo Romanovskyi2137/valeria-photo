@@ -4,7 +4,9 @@ header {
     display: flex;
     justify-content: space-between;
     padding-top: 15px;
+    position: relative;
     .header_logo {
+        z-index: 3;
         background-size: contain; 
         background-repeat: no-repeat;
         background-position: center; 
@@ -13,14 +15,59 @@ header {
         height: 100px;
     };
     .menu-primary-container {
+        
         .menu {
             display: flex;
             gap: 30px;
             line-height: 100px;
             font-size: $button-fz;
             @media (max-width: $tablet) {
-                gap: 20px;
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                transform: translateX(100vw);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba($main-color, 0.6);
+                backdrop-filter: blur(10px);
+                transition: transform $transition-speed ease-in-out;
             }
+        }
+        @media (max-width: $tablet) {
+            position: absolute;
+        }
+        .menu_active {
+            transform: translateX(0);
+        }       
+    }
+    .menu_toggle_wrapper {
+        position: relative;
+        display: none;
+        @media (max-width: $tablet) {
+            display: block;
+            right: 60px;
+        }
+        .menu_toggle {
+            position: absolute;
+            z-index: 10;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: none;
+            content: "";
+            background-image: url("../img/icons/burger-menu.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .menu_toggle_active {
+            background-image: url("../img/icons/close-x.svg");
         }
     }
 }
