@@ -13,6 +13,10 @@ header .header_logo {
   width: 220px;
   height: 100px;
 }
+header .menu-primary-container a:hover {
+  opacity: 0.6;
+  transition: all 0.6s ease;
+}
 header .menu-primary-container .menu {
   display: flex;
   gap: 30px;
@@ -32,7 +36,7 @@ header .menu-primary-container .menu {
     justify-content: center;
     align-items: center;
     background-color: rgba(237, 231, 228, 0.6);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(3px);
     transition: transform 0.3s ease-in-out;
   }
 }
@@ -97,11 +101,19 @@ footer {
   padding-top: 40px;
   padding-bottom: 20px;
 }
+footer a {
+  cursor: pointer;
+}
+footer a:hover {
+  opacity: 0.6;
+  transition: all 0.6s ease-in-out;
+}
 footer .footer_info_container {
   min-height: 60px;
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 footer .footer_info_container .inquire_container,
 footer .footer_info_container .contacts_container,
@@ -112,6 +124,7 @@ footer .footer_info_container .socials_container {
   align-items: center;
   justify-content: center;
   padding: 5px;
+  gap: 8px;
 }
 footer .footer_info_container .inquire_container {
   text-transform: uppercase;
@@ -119,21 +132,48 @@ footer .footer_info_container .inquire_container {
 }
 @media (max-width: 1025px) {
   footer .footer_info_container .inquire_container {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
-@media (max-width: 1025px) {
+@media (max-width: 576px) {
   footer .footer_info_container .inquire_container {
-    font-size: 18px;
+    font-size: 28px;
   }
 }
 footer .footer_info_container .contacts_container {
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   border-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6), transparent) 1;
+  gap: 8x;
+}
+footer .footer_info_container .contacts_container a {
+  line-height: 25px;
+  font-size: 14px;
+}
+footer .footer_info_container .contacts_container p {
+  font-size: 14px;
+  color: #3E3132;
+  text-align: center;
+}
+@media (max-width: 576px) {
+  footer .footer_info_container .contacts_container {
+    border: none;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.6), transparent) 1;
+  }
+}
+footer .footer_info_container .socials_container {
+  text-transform: uppercase;
+}
+@media (max-width: 576px) {
+  footer .footer_info_container {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 footer p {
-  padding-top: 20px;
+  line-height: 25px;
   font-size: 14px;
   color: #666;
 }

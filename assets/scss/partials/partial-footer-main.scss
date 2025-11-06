@@ -6,11 +6,19 @@ footer {
     align-items: center;
     padding-top: 40px;
     padding-bottom: 20px;
+    a {
+        cursor: pointer;
+    }
+    a:hover {
+        opacity: $hover-opacity;
+        transition: all calc($transition-speed * 2) ease-in-out;
+    }
     .footer_info_container {
         min-height: 60px;
         display: flex;
         width: 100%;
         justify-content: space-between; 
+        margin-bottom: 20px;
         .inquire_container,
         .contacts_container,
         .socials_container {
@@ -20,25 +28,49 @@ footer {
             align-items: center;
             justify-content: center;
             padding: 5px;
+            gap: 8px;
         }
         .inquire_container {
             text-transform: uppercase;
             font-size: 36px;
             @media (max-width: $tablet) {
-                font-size: 24px;
+                font-size: 32px;
             }
-            @media (max-width: $tablet) {
-                font-size: 18px;
+            @media (max-width: $mobile) {
+                font-size: 28px;
             }
         }
         .contacts_container {
             border-left: 1px solid transparent;
             border-right: 1px solid transparent;
             border-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6), transparent) 1;
+            gap: 8x;
+            a {
+                line-height: 25px;
+                font-size: 14px;
+            }
+            p {
+                font-size: calc($main-fz - 2px);
+                color: $secondary-color;
+                text-align: center;
+            }
+            @media (max-width: $mobile) {
+                border: none;
+                border-top: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                border-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.6), transparent) 1;
+            }
+        }
+        .socials_container {
+            text-transform: uppercase;;
+        }
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: 10px;
         }
     }
     p {
-        padding-top: 20px;
+        line-height: 25px;
         font-size: 14px;
         color: #666;
     }

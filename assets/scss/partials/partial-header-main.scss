@@ -15,7 +15,10 @@ header {
         height: 100px;
     };
     .menu-primary-container {
-        
+        a:hover {
+            opacity: $hover-opacity;
+            transition: all calc($transition-speed * 2) ease;
+        }
         .menu {
             display: flex;
             gap: 30px;
@@ -33,7 +36,7 @@ header {
                 justify-content: center;
                 align-items: center;
                 background-color: rgba($main-color, 0.6);
-                backdrop-filter: blur(10px);
+                backdrop-filter: blur(3px);
                 transition: transform $transition-speed ease-in-out;
             }
         }
