@@ -1,4 +1,9 @@
 <?php
+// imports
+require get_template_directory().'/inc/cpt-main-album.php';
+// 
+
+
 add_filter('show_admin_bar', '__return_false'); // hide admin bar
 // styles
 function theme_enqueue_styles() {
@@ -41,6 +46,26 @@ function theme_enqueue_scripts () {
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 // 
 
+// remove possibility to make additional galleries (Gallery post type)
+add_action('admin_init', function() {
+    global $pagenow;
+    
+    if ($pagenow === 'post-new.php' && isset($_GET['post_type']) && $_GET['post_type'] === 'gallery') {
+        $existing = get_posts([
+            'post_type' => 'gallery',
+            'post_status' => 'any',
+            'posts_per_page' => 1,
+        ]);
+        
+        if (!empty($existing)) {
+            wp_redirect(admin_url('edit.php?post_type=gallery'));
+            exit;
+        }
+    }
+});
+//
+
+// ACF
 if (class_exists('ACF')) {
 
     // Save fields to json files
