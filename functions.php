@@ -1,6 +1,7 @@
 <?php
 // imports
-require get_template_directory().'/inc/cpt-main-album.php';
+require get_template_directory().'/inc/cpt-main-gallery.php';
+require get_template_directory().'/inc/cpt-story.php';
 // 
 
 

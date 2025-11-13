@@ -2,9 +2,9 @@
 function register_gallery_cpt () {
     register_post_type('gallery', [
         'labels' => [
-            'name' => 'gallery',
-            'singular_name' => 'gallery',
-            'add_new_item' => 'Add gallery',
+            'name' => 'Gallery',
+            'singular_name' => 'Gallery',
+            'add_new_item' => 'Add new gallery',
             'edit_item' => 'Set gallery',
             'view_item' => 'Watch gallery',
             'search_items' => 'Search gallery',

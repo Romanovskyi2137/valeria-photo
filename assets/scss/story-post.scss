@@ -1,0 +1,42 @@
+.single_album {
+    padding: 40px 0;
+    
+    .acf-photo-gallery-item {
+        /* Встановлюємо колонки для галереї */
+        column-count: 3;
+        column-gap: 20px;
+        
+        /* Забезпечуємо, що елементи не розриваються між колонками, 
+           що важливо для цілісності зображень */
+        -webkit-column-break-inside: avoid;
+        break-inside: avoid; 
+        
+        /* Адаптивність для мобільних пристроїв */
+        @media (max-width: 768px) {
+            column-count: 2;
+        }
+        
+        @media (max-width: 480px) {
+            column-count: 1;
+        }
+    }
+    
+    .acf-photo-gallery-item a {
+        /* Робимо посилання блочним елементом */
+        display: block;
+        margin-bottom: 20px; /* Вертикальний відступ між зображеннями */
+        overflow: hidden; /* Запобігання виходу елементів */
+    }
+    
+    .acf-photo-gallery-item img {
+        /* Зображення повинні займати 100% ширини своєї колонки */
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease; /* Ефект для взаємодії */
+    }
+    
+    .acf-photo-gallery-item a:hover img {
+        transform: scale(1.02);
+    }
+}
