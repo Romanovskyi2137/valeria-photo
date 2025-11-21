@@ -325,6 +325,110 @@ footer p {
   transform: scale(1.02);
 }
 
+.about_section {
+  background-color: #EDE7E4;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.about_section .about_title {
+  font-family: "League Script", cursive;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #3E3132;
+  margin-bottom: 60px;
+  text-align: left;
+  font-style: italic;
+  max-width: 80vw;
+}
+@media (max-width: 1025px) {
+  .about_section .about_title {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 576px) {
+  .about_section .about_title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+}
+.about_section .about_content_container {
+  display: flex;
+  gap: 80px;
+  max-width: 1280px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+@media (max-width: 1025px) {
+  .about_section .about_content_container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+}
+.about_section .about_content_img_box {
+  flex: 0 0 40%;
+  max-width: 40%;
+  position: sticky;
+  top: 20px;
+}
+.about_section .about_content_img_box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media (max-width: 1025px) {
+  .about_section .about_content_img_box {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: static;
+    top: auto;
+    order: 1;
+  }
+}
+.about_section .about_content_text_box {
+  flex: 1;
+  padding-top: 20px;
+}
+.about_section .about_content_text_box .about_text {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #3E3132;
+  margin-bottom: 30px;
+  text-align: left;
+  max-width: 450px;
+}
+@media (max-width: 576px) {
+  .about_section .about_content_text_box .about_text {
+    font-size: 1.1rem;
+  }
+}
+.about_section .about_content_text_box h2 {
+  font-family: "League Script", cursive;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #91766E;
+  margin-top: 40px;
+  text-align: left;
+  line-height: 1;
+}
+@media (max-width: 576px) {
+  .about_section .about_content_text_box h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 1025px) {
+  .about_section .about_content_text_box {
+    padding-top: 0;
+    order: 2;
+  }
+}
+
 /* Reset CSS */
 * {
   margin: 0;

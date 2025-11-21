@@ -1,0 +1,119 @@
+@use '../scss/variables.scss' as *;
+
+.about_section {
+    // Використовуємо основний колір фону
+    background-color: $main-color;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    
+    // @media (max-width: $tablet) {
+    //     padding: 60px 20px;
+    // }
+
+    // 1. Заголовок секції (Тайтл)
+    .about_title {
+        font-family: $script-font;
+        // На сайті використовується великий шрифт, схожий на 'heading-fz', але я його збільшу для ефекту
+        font-size: 4rem; 
+        font-weight: 400;
+        color: $secondary-color;
+        margin-bottom: 60px; // Дуже великий відступ для чистого простору
+        text-align: left; 
+        font-style: italic;
+        max-width: 80vw;
+
+        @media (max-width: $tablet) {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            text-align: center; // Центруємо на планшетах/мобільних
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: $mobile) {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+    }
+
+    // 2. Контейнер основного контенту (Фото + Текст)
+    .about_content_container {
+        display: flex;
+        gap: 80px; // Збільшений проміжок для "чистого простору"
+        max-width: $desktop; // Обмеження ширини для контролю
+        margin: 0 auto; // Центрування на сторінці
+        align-items: flex-start; // Зображення та текст починаються згори
+        
+        // Перехід до вертикального стеку
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+    }
+
+    // 3. Блок зображення (Зліва)
+    .about_content_img_box {
+        flex: 0 0 40%; // ЗМЕНШЕНА ширина до 40%
+        max-width: 40%; // ЗМЕНШЕНА ширина до 40%
+        position: sticky; // <-- ДОДАНО: робить блок "липким"
+        top: 20px; // <-- ДОДАНО: відступ від верхнього краю екрана, коли блок "прилип"
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        @media (max-width: $tablet) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            position: static; // ВИМКНЕНО sticky на мобільних пристроях
+            top: auto;
+            order: 1; // Залишаємо його першим у вертикальному стеку
+        }
+    }
+
+    // 4. Блок тексту (Справа)
+    .about_content_text_box {
+        flex: 1; // Займає решту простору (~60%)
+        padding-top: 20px; // Невеликий відступ, щоб текст був трохи нижче верхівки зображення
+
+        // Основний текст (Параграф)
+        .about_text {
+            font-family: $main-font;
+            font-size: 1.25rem; // Трохи більший розмір для кращої читабельності
+            line-height: 1.7;
+            color: $secondary-color;
+            margin-bottom: 30px;
+            // Текст на сайті вирівняний по лівому краю
+            text-align: left; 
+            max-width: 450px;
+
+            @media (max-width: $mobile) {
+                font-size: 1.1rem;
+            }
+        }
+
+        // 5. Сабтайтл (Підпис / Другий заголовок)
+        h2 {
+            font-family: $script-font; // Використовуємо ваш декоративний шрифт для акценту
+            font-size: 2.5rem; // Збільшений розмір для красивого підпису
+            font-weight: 400; 
+            color: $cofee-color; // Акцентний колір
+            margin-top: 40px;
+            text-align: left; // Зліва, як підпис
+            line-height: 1;
+
+            @media (max-width: $mobile) {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: $tablet) {
+            padding-top: 0;
+            order: 2; // Розміщуємо текст під зображенням у вертикальному стеку
+        }
+    }
+}
