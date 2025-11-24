@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
             nextEl: '.custom-next',
             prevEl: '.custom-prev',
         },
-        
+        // watchOverflow: false, // always show navigation arrows
         speed: 800,
         spaceBetween: 30,
         loop: true, // Infinite scrolling
@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             // Desktop: 4 slides
             1200: {
-                slidesPerView: 4, 
+                slidesPerView: 3, 
                 spaceBetween: 40,
                 centeredSlides: false 
             },
             // Large screens: 5 slides
             1600: {
-                slidesPerView: 5,
+                slidesPerView: 3,
                 spaceBetween: 50
             }
         }

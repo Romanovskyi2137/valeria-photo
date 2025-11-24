@@ -25,6 +25,7 @@ header {
             gap: 30px;
             line-height: 100px;
             font-size: $button-fz;
+            font-weight: 400;
             text-transform: uppercase;
             @media (max-width: $tablet) {
                 width: 100vw;
