@@ -4,7 +4,7 @@
 ?>
 <header class="__container">
     <a class="header_logo" 
-        href=""
+        href="/home"
         style="background-image: url('<?php echo esc_url($main_logo); ?>');">
     </a>
     <div class="menu_toggle_wrapper">

@@ -1,77 +1,101 @@
-.stories {
-    padding: 40px 0;
+@use './variables' as *;
 
-    &.__container {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
-        gap: 30px;
-        padding-left: 20px;
-        padding-right: 20px;
-        scrollbar-width: none;
-        &::-webkit-scrollbar {
-            display: none;
+.stories {
+    width: 100%;
+    padding: 60px 0;
+    padding-bottom: 0;
+    overflow: hidden;
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 60px;
+        box-sizing: border-box;
+    }
+}
+
+.stories-slider {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.story-slide {
+    height: auto;
+    box-sizing: border-box;
+}
+
+.story-card {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    transition: opacity 0.3s;
+    cursor: grab;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &__img-wrap {
+        width: 100%;
+        aspect-ratio: 3 / 4.5;
+        margin-bottom: 20px;
+        // background: #eee;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &__text {
+        h2 {
+            font-family: $main-font;
+            font-size: 2rem;
+            color: $secondary-color;
+            // font-style: italic;
+            font-weight: 400;
+            margin: 0 0 10px 0;
+        }
+    }
+
+    &__desc {
+        color: $cofee-color;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        p {
+            margin: 0;
         }
     }
 }
 
-.story-item {
-    flex: 0 0 auto;
-    width: 280px;
-    max-width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    text-align: center;
+.custom-prev,
+.custom-next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    z-index: 100;
+    cursor: pointer;
+    color: $secondary-color;
 
-    a {
-        text-decoration: none;
-        display: block;
-        color: #333;
-    }
-    
-    img {
-        width: 100%;
-        height: 380px;
-        object-fit: cover;
-        display: block;
-        filter: grayscale(100%);
-        transition: filter 0.3s ease;
-    }
-
-    a:hover img {
-        filter: grayscale(0%);
-    }
-
-    h2, p {
-        margin: 0;
-        padding: 0 15px;
-    }
-
-    h2 {
-        font-family: 'Playfair Display', serif; 
+    &::after {
         font-size: 24px;
-        font-weight: 400;
-        padding-top: 15px;
-        padding-bottom: 5px;
-        color: #b18840; 
+        font-weight: bold;
     }
+}
 
-    /* Стилі для першого параграфа (передбачається, що це 'WEDDING') */
-    p:nth-of-type(1) {
-        font-family: Arial, sans-serif;
-        text-transform: uppercase;
-        font-size: 10px;
-        letter-spacing: 2px;
-        color: #666;
-        padding-bottom: 5px;
-    }
-    
-    /* Стилі для другого параграфа (передбачається, що це 'Location') */
-    p:nth-of-type(2) {
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        color: #999;
-        padding-bottom: 20px;
-    }
+.custom-prev {
+    left: 10px;
+}
+
+.custom-next {
+    right: 10px;
 }

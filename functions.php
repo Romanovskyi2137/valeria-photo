@@ -9,6 +9,7 @@ add_filter('show_admin_bar', '__return_false'); // hide admin bar
 // styles
 function theme_enqueue_styles() {
     wp_enqueue_style('main_css', get_template_directory_uri() . '/assets/css/style.css');
+    wp_enqueue_style('swiper', get_template_directory_uri() . '/src/libs/swiper/swiper-bundle.min.css');
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
@@ -43,6 +44,8 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_league_script');
 // scripts
 function theme_enqueue_scripts () {
     wp_enqueue_script('main_js', get_template_directory_uri() . '/assets/js/main.js', array(), false, true);
+    wp_enqueue_script('swiper', get_template_directory_uri() . '/src/libs/swiper/swiper-bundle.min.js', array(), false, true);
+    wp_enqueue_script('swiper_init', get_template_directory_uri() . '/assets/js/swiper.js', array('swiper'), false, true);
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 // 
