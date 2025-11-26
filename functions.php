@@ -2,6 +2,7 @@
 // imports
 require get_template_directory().'/inc/cpt-main-gallery.php';
 require get_template_directory().'/inc/cpt-story.php';
+require get_template_directory().'/inc/use-cf7-template.php';
 // 
 
 

@@ -1,0 +1,212 @@
+// --- VARIABLES ---
+$c-black: #000000;
+$c-white: #ffffff;
+$c-gray: #777777;      // Колір лейблів
+$c-light-gray: #e0e0e0; // Колір ліній
+$font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+
+.valeria-contact-page {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: $font-main;
+    color: $c-black;
+    padding: 60px 20px;
+
+    // --- HEADER ---
+    .contact-header {
+        text-align: center;
+        margin-bottom: 60px;
+
+        .contact-title {
+            font-size: 28px;
+            font-weight: 400;
+            margin: 0 0 20px 0;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-info-block {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 15px;
+            
+            .contact-link {
+                color: $c-black;
+                text-decoration: none;
+                border-bottom: 1px solid transparent;
+                transition: border-color 0.3s;
+                
+                &:hover { border-bottom-color: $c-black; }
+            }
+            
+            .contact-location {
+                color: $c-gray;
+                font-weight: 300;
+            }
+        }
+    }
+
+    // --- GRID SYSTEM ---
+    .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px; // Відступ між колонками
+        margin-bottom: 35px; // Відступ між рядами
+
+        &.two-columns .form-group {
+            flex: 1;
+            min-width: 250px;
+        }
+        &.full-width .form-group {
+            width: 100%;
+        }
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        position: relative; // Для позиціювання помилок
+
+        label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+            color: $c-gray;
+            font-weight: 600;
+        }
+    }
+
+    // --- INPUTS & SELECTS SHARED STYLES ---
+    .clean-input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $c-light-gray;
+        padding: 10px 0;
+        font-size: 16px;
+        background: transparent;
+        border-radius: 0;
+        outline: none;
+        color: $c-black;
+        font-family: inherit;
+        transition: border-color 0.3s ease;
+        height: 45px; // Фіксована висота для вирівнювання
+
+        &:focus {
+            border-bottom-color: $c-black;
+        }
+        &::placeholder {
+            color: lighten($c-gray, 20%);
+            font-weight: 300;
+        }
+    }
+
+    // --- SELECT SPECIFIC ---
+    select.clean-select {
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        
+        // Чорна стрілочка SVG
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='%23000000' d='M7 10l5 5 5-5z'/></svg>");
+        background-repeat: no-repeat;
+        background-position: right 0px center;
+        padding-right: 25px;
+
+        // Колір плейсхолдера (перший елемент)
+        &:invalid, 
+        option[value=""][disabled] {
+            color: lighten($c-gray, 20%);
+        }
+    }
+
+    // --- SUBMIT BUTTON ---
+    .form-footer {
+        margin-top: 30px;
+        
+        .wpcf7-submit {
+            background-color: $c-black;
+            color: $c-white;
+            border: none;
+            padding: 18px 70px; // Широка кнопка
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                background-color: lighten($c-black, 20%);
+                // або opacity: 0.8;
+            }
+        }
+    }
+
+    // --- DISCLAIMER ---
+    .contact-disclaimer {
+        margin-top: 80px;
+        text-align: center;
+        font-size: 14px;
+        color: $c-gray;
+        line-height: 1.6;
+        font-weight: 300;
+
+        a {
+            color: $c-black;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+            transition: border-color 0.3s;
+            
+            &:hover { border-bottom-color: $c-black; }
+        }
+        
+        p {
+            margin: 5px 0;
+        }
+    }
+
+    // --- CF7 RESPONSE MESSAGES ---
+    .wpcf7-not-valid-tip {
+        font-size: 11px;
+        color: #d32f2f; // Червоний
+        margin-top: 5px;
+    }
+
+    .wpcf7-response-output {
+        margin-top: 40px !important;
+        text-align: center;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 14px;
+        color: $c-black;
+    }
+    
+    // Спінер завантаження (якщо треба приховати або стилізувати)
+    .wpcf7-spinner {
+        margin-top: 20px;
+    }
+
+    // --- MOBILE RESPONSIVE ---
+    @media (max-width: 768px) {
+        padding: 40px 20px;
+
+        .contact-header .contact-title {
+            font-size: 24px;
+        }
+
+        .form-row {
+            gap: 20px;
+            flex-direction: column; // Колонки стають рядками
+            
+            &.two-columns .form-group {
+                width: 100%;
+            }
+        }
+        
+        .wpcf7-submit {
+            width: 100%; // Кнопка на всю ширину на моб
+        }
+    }
+}

@@ -446,6 +446,176 @@ footer p {
   }
 }
 
+.valeria-contact-page {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000000;
+  padding: 60px 20px;
+}
+.valeria-contact-page .contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.valeria-contact-page .contact-header .contact-title {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.5px;
+}
+.valeria-contact-page .contact-header .contact-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+}
+.valeria-contact-page .contact-header .contact-info-block .contact-link {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+.valeria-contact-page .contact-header .contact-info-block .contact-link:hover {
+  border-bottom-color: #000000;
+}
+.valeria-contact-page .contact-header .contact-info-block .contact-location {
+  color: #777777;
+  font-weight: 300;
+}
+.valeria-contact-page .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 35px;
+}
+.valeria-contact-page .form-row.two-columns .form-group {
+  flex: 1;
+  min-width: 250px;
+}
+.valeria-contact-page .form-row.full-width .form-group {
+  width: 100%;
+}
+.valeria-contact-page .form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.valeria-contact-page .form-group label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  color: #777777;
+  font-weight: 600;
+}
+.valeria-contact-page .clean-input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 0;
+  font-size: 16px;
+  background: transparent;
+  border-radius: 0;
+  outline: none;
+  color: #000000;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  height: 45px;
+}
+.valeria-contact-page .clean-input:focus {
+  border-bottom-color: #000000;
+}
+.valeria-contact-page .clean-input::placeholder {
+  color: #aaaaaa;
+  font-weight: 300;
+}
+.valeria-contact-page select.clean-select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='%23000000' d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0px center;
+  padding-right: 25px;
+}
+.valeria-contact-page select.clean-select:invalid,
+.valeria-contact-page select.clean-select option[value=""][disabled] {
+  color: #aaaaaa;
+}
+.valeria-contact-page .form-footer {
+  margin-top: 30px;
+}
+.valeria-contact-page .form-footer .wpcf7-submit {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 18px 70px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.valeria-contact-page .form-footer .wpcf7-submit:hover {
+  background-color: #333333;
+}
+.valeria-contact-page .contact-disclaimer {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 14px;
+  color: #777777;
+  line-height: 1.6;
+  font-weight: 300;
+}
+.valeria-contact-page .contact-disclaimer a {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s;
+}
+.valeria-contact-page .contact-disclaimer a:hover {
+  border-bottom-color: #000000;
+}
+.valeria-contact-page .contact-disclaimer p {
+  margin: 5px 0;
+}
+.valeria-contact-page .wpcf7-not-valid-tip {
+  font-size: 11px;
+  color: #d32f2f;
+  margin-top: 5px;
+}
+.valeria-contact-page .wpcf7-response-output {
+  margin-top: 40px !important;
+  text-align: center;
+  border: none !important;
+  padding: 0 !important;
+  font-size: 14px;
+  color: #000000;
+}
+.valeria-contact-page .wpcf7-spinner {
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .valeria-contact-page {
+    padding: 40px 20px;
+  }
+  .valeria-contact-page .contact-header .contact-title {
+    font-size: 24px;
+  }
+  .valeria-contact-page .form-row {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .valeria-contact-page .form-row.two-columns .form-group {
+    width: 100%;
+  }
+  .valeria-contact-page .wpcf7-submit {
+    width: 100%;
+  }
+}
+
 /* Reset CSS */
 * {
   margin: 0;
