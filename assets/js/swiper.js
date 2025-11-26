@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             // Desktop: 4 slides
             1200: {
-                slidesPerView: 3, 
+                slidesPerView: 4, 
                 spaceBetween: 40,
                 centeredSlides: false 
             },
             // Large screens: 5 slides
             1600: {
-                slidesPerView: 3,
+                slidesPerView: 5,
                 spaceBetween: 50
             }
         }

@@ -16,7 +16,7 @@
         // На сайті використовується великий шрифт, схожий на 'heading-fz', але я його збільшу для ефекту
         font-size: 4rem; 
         font-weight: 400;
-        color: $secondary-color;
+        color: $accent-color;
         margin-bottom: 60px; // Дуже великий відступ для чистого простору
         text-align: left; 
         font-style: italic;
@@ -101,9 +101,10 @@
             font-family: $script-font; // Використовуємо ваш декоративний шрифт для акценту
             font-size: 2.5rem; // Збільшений розмір для красивого підпису
             font-weight: 400; 
-            color: $cofee-color; // Акцентний колір
+            color: $accent-color; // Акцентний колір
             margin-top: 40px;
-            text-align: left; // Зліва, як підпис
+            text-align: right; // Зліва, як підпис
+            padding-right: 20px;
             line-height: 1;
 
             @media (max-width: $mobile) {

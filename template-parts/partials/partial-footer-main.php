@@ -12,7 +12,7 @@
 <footer>
     <div class="footer_info_container __container">
         <div class="inquire_container">
-            <a>inquire</a>
+            <a href="<?php echo esc_url( site_url( '/contacts' ) ); ?>">inquire</a>
         </div>
         <div class="contacts_container">
             <?php if ($location): ?>

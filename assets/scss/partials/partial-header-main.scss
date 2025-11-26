@@ -3,7 +3,7 @@
 header {
     display: flex;
     justify-content: space-between;
-    padding-top: 15px;
+    padding-top: 30px;
     position: relative;
     z-index: 101;
     .header_logo {
@@ -100,5 +100,8 @@ header {
             mask-size: contain;
         }
 
+    }
+    @media (max-width: $tablet) {
+        padding-top: 20px;
     }
 }

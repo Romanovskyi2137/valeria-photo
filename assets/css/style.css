@@ -2,7 +2,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding-top: 15px;
+  padding-top: 30px;
   position: relative;
   z-index: 101;
 }
@@ -95,6 +95,11 @@ header .menu_toggle_wrapper .menu_toggle_active {
   mask-position: center;
   -webkit-mask-size: contain;
   mask-size: contain;
+}
+@media (max-width: 1025px) {
+  header {
+    padding-top: 20px;
+  }
 }
 
 footer {
@@ -351,7 +356,7 @@ footer p {
   font-family: "League Script", cursive;
   font-size: 4rem;
   font-weight: 400;
-  color: #3E3132;
+  color: #8C381E;
   margin-bottom: 60px;
   text-align: left;
   font-style: italic;
@@ -429,9 +434,10 @@ footer p {
   font-family: "League Script", cursive;
   font-size: 2.5rem;
   font-weight: 400;
-  color: #91766E;
+  color: #8C381E;
   margin-top: 40px;
-  text-align: left;
+  text-align: right;
+  padding-right: 20px;
   line-height: 1;
 }
 @media (max-width: 576px) {
@@ -449,8 +455,8 @@ footer p {
 .valeria-contact-page {
   max-width: 800px;
   margin: 0 auto;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #000000;
+  font-family: "Nanum Myeongjo", serif;
+  color: #3E3132;
   padding: 60px 20px;
 }
 .valeria-contact-page .contact-header {
@@ -470,13 +476,13 @@ footer p {
   font-size: 15px;
 }
 .valeria-contact-page .contact-header .contact-info-block .contact-link {
-  color: #000000;
+  color: #3E3132;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s;
 }
 .valeria-contact-page .contact-header .contact-info-block .contact-link:hover {
-  border-bottom-color: #000000;
+  border-bottom-color: #3E3132;
 }
 .valeria-contact-page .contact-header .contact-info-block .contact-location {
   color: #777777;
@@ -517,13 +523,13 @@ footer p {
   background: transparent;
   border-radius: 0;
   outline: none;
-  color: #000000;
+  color: #3E3132;
   font-family: inherit;
   transition: border-color 0.3s ease;
   height: 45px;
 }
 .valeria-contact-page .clean-input:focus {
-  border-bottom-color: #000000;
+  border-bottom-color: #3E3132;
 }
 .valeria-contact-page .clean-input::placeholder {
   color: #aaaaaa;
@@ -547,7 +553,7 @@ footer p {
   margin-top: 30px;
 }
 .valeria-contact-page .form-footer .wpcf7-submit {
-  background-color: #000000;
+  background-color: #3E3132;
   color: #ffffff;
   border: none;
   padding: 18px 70px;
@@ -559,7 +565,7 @@ footer p {
   transition: all 0.3s ease;
 }
 .valeria-contact-page .form-footer .wpcf7-submit:hover {
-  background-color: #333333;
+  background-color: rgb(118.972972973, 94.027027027, 95.9459459459);
 }
 .valeria-contact-page .contact-disclaimer {
   margin-top: 80px;
@@ -570,13 +576,13 @@ footer p {
   font-weight: 300;
 }
 .valeria-contact-page .contact-disclaimer a {
-  color: #000000;
+  color: #3E3132;
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   transition: border-color 0.3s;
 }
 .valeria-contact-page .contact-disclaimer a:hover {
-  border-bottom-color: #000000;
+  border-bottom-color: #3E3132;
 }
 .valeria-contact-page .contact-disclaimer p {
   margin: 5px 0;
@@ -592,7 +598,7 @@ footer p {
   border: none !important;
   padding: 0 !important;
   font-size: 14px;
-  color: #000000;
+  color: #3E3132;
 }
 .valeria-contact-page .wpcf7-spinner {
   margin-top: 20px;

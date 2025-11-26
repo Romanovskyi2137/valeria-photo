@@ -1,9 +1,12 @@
+@use "../variables" as *;
+
 // --- VARIABLES ---
-$c-black: #000000;
+$c-black: $secondary-color;
 $c-white: #ffffff;
 $c-gray: #777777;      // Колір лейблів
 $c-light-gray: #e0e0e0; // Колір ліній
-$font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+// $font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+$font-main: $main-font;
 
 .valeria-contact-page {
     max-width: 800px;
