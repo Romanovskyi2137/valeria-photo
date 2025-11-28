@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(https://db.onlinewebfonts.com/c/742dcddc06afc2dfc1ecedd0a42adca0?family=Cardinal+Fruit+Italic);
 header {
   display: flex;
   justify-content: space-between;
@@ -99,6 +100,11 @@ header .menu_toggle_wrapper .menu_toggle_active {
 @media (max-width: 1025px) {
   header {
     padding-top: 20px;
+  }
+}
+@media (max-width: 576px) {
+  header {
+    padding-top: 10px;
   }
 }
 
@@ -353,9 +359,9 @@ footer p {
   padding-bottom: 40px;
 }
 .about_section .about_title {
-  font-family: "League Script", cursive;
+  font-family: "Cardinal Fruit Italic";
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #8C381E;
   margin-bottom: 60px;
   text-align: left;
@@ -431,9 +437,9 @@ footer p {
   }
 }
 .about_section .about_content_text_box h2 {
-  font-family: "League Script", cursive;
+  font-family: "Cardinal Fruit Italic";
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #8C381E;
   margin-top: 40px;
   text-align: right;
@@ -457,7 +463,7 @@ footer p {
   margin: 0 auto;
   font-family: "Nanum Myeongjo", serif;
   color: #3E3132;
-  padding: 60px 20px;
+  padding: 30px 20px;
 }
 .valeria-contact-page .contact-header {
   text-align: center;
@@ -605,7 +611,7 @@ footer p {
 }
 @media (max-width: 768px) {
   .valeria-contact-page {
-    padding: 40px 20px;
+    padding: 30px 20px;
   }
   .valeria-contact-page .contact-header .contact-title {
     font-size: 24px;
@@ -619,6 +625,29 @@ footer p {
   }
   .valeria-contact-page .wpcf7-submit {
     width: 100%;
+  }
+}
+
+.photo_container {
+  padding-top: 80px;
+  margin: 0 auto;
+  width: 70%;
+}
+.photo_container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 1025px) {
+  .photo_container {
+    width: 90%;
+    padding-top: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .photo_container {
+    width: 95%;
+    padding-top: 20px;
   }
 }
 

@@ -1,5 +1,7 @@
 @use '../scss/variables.scss' as *;
 
+$font-weight: 300;
+
 .about_section {
     // Використовуємо основний колір фону
     background-color: $main-color;
@@ -12,10 +14,10 @@
 
     // 1. Заголовок секції (Тайтл)
     .about_title {
-        font-family: $script-font;
+        font-family: $cardinal-font;
         // На сайті використовується великий шрифт, схожий на 'heading-fz', але я його збільшу для ефекту
         font-size: 4rem; 
-        font-weight: 400;
+        font-weight: $font-weight;
         color: $accent-color;
         margin-bottom: 60px; // Дуже великий відступ для чистого простору
         text-align: left; 
@@ -98,9 +100,9 @@
 
         // 5. Сабтайтл (Підпис / Другий заголовок)
         h2 {
-            font-family: $script-font; // Використовуємо ваш декоративний шрифт для акценту
+            font-family: $cardinal-font; // Використовуємо ваш декоративний шрифт для акценту
             font-size: 2.5rem; // Збільшений розмір для красивого підпису
-            font-weight: 400; 
+            font-weight: $font-weight; 
             color: $accent-color; // Акцентний колір
             margin-top: 40px;
             text-align: right; // Зліва, як підпис

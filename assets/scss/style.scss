@@ -6,6 +6,18 @@
 @use '../scss/story-post.scss';
 @use '../scss/about.scss';
 @use '../scss/components/contact-form.scss';
+@use '../scss/contacts.scss';
+@import url(https://db.onlinewebfonts.com/c/742dcddc06afc2dfc1ecedd0a42adca0?family=Cardinal+Fruit+Italic);
+// custom fonts
+// @font-face {
+//   font-family: 'Cardinal Fruit Italic'; 
+//   src: url('fonts/Cardinal Fruit Italic.woff2') format('woff2'),
+//        url('fonts/Cardinal Fruit Italic.woff') format('woff');
+//   font-weight: 400; 
+//   font-style: italic;
+//   font-display: swap; 
+// }
+// 
 
 /* Reset CSS */
 * {

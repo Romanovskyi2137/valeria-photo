@@ -1,0 +1,20 @@
+@use '../scss/variables' as *;
+
+.photo_container {
+    padding-top: 80px;
+    margin: 0 auto;
+    width: 70%;
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    @media (max-width: $tablet) {
+        width: 90%;
+        padding-top: 40px;
+    }
+    @media (max-width: $mobile) {
+        width: 95%;
+        padding-top: 20px; 
+    }
+}
