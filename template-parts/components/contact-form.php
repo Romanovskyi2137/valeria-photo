@@ -51,8 +51,8 @@
                 [text location class:clean-input placeholder "City, Venue or Region"]
             </div>
             <div class="form-group">
-                <label>Photography Budget</label>
-                [select budget class:clean-input class:clean-select first_as_label "Select range..." "Flexible / Unsure" "< €1,500" "€1,500 - €2,500" "€2,500 - €4,000" "€4,000+"]
+                <label class="form-label">Photography Budget</label>
+                [text budget class:clean-input placeholder "Your Budget Expectation"]
             </div>
         </div>
 
